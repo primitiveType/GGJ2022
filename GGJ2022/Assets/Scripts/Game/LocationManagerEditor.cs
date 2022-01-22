@@ -10,6 +10,23 @@ public class LocationManagerEditor : Editor
     {
         base.OnInspectorGUI();
         LocationManager myTarget = (LocationManager)target;
+
+        if (GUILayout.Button("Up")) {
+            myTarget.GoUp();
+        }
+        using (var horizontalScope = new GUILayout.HorizontalScope("box"))
+        {
+            if (GUILayout.Button("Left")) {
+                myTarget.GoLeft();
+            }
+            if (GUILayout.Button("Down")) {
+                myTarget.GoDown();
+            }
+            if (GUILayout.Button("Right")) {
+                myTarget.GoRight();
+            }
+        }
+        GUILayout.Space(20);
         foreach (var location in myTarget.Locations) {
             if (GUILayout.Button(location.name)) {
                 myTarget.SetLocation(location);

@@ -5,15 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class Location : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Location Left = null;
+    public Location Up = null;
+    public Location Right = null;
+    public Location Down = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

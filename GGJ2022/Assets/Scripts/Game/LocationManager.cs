@@ -28,4 +28,34 @@ public class LocationManager : MonoBehaviour
         CameraMain.transform.rotationTo(Duration, cam.transform.rotation);
     }
 
+    public void GoUp() {
+        if (CurrentLocation == null) return;
+
+        if (CurrentLocation.Up == null) return;
+
+        SetLocation(CurrentLocation.Up);
+    }
+
+    public void GoRight() {
+        if (CurrentLocation == null) return;
+
+        if (CurrentLocation.Right == null) return;
+
+        SetLocation(CurrentLocation.Right);
+    }
+    public void GoDown() {
+        if (CurrentLocation == null) return;
+
+        if (CurrentLocation.Down == null) return;
+
+        SetLocation(CurrentLocation.Down);
+    }
+    public void GoLeft() {
+        if (CurrentLocation == null) return;
+
+        if (CurrentLocation.Left == null) return;
+
+        SetLocation(CurrentLocation.Left);
+    }
+
 }
