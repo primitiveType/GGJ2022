@@ -1,0 +1,1 @@
+﻿public delegate void StateChangedEvent(object sender, StateChangedEventArgs args);
