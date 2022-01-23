@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-
 [CustomEditor(typeof(LocationManager))]
 public class LocationManagerEditor : Editor
 {
@@ -34,3 +34,4 @@ public class LocationManagerEditor : Editor
         }
     }
 }
+#endif

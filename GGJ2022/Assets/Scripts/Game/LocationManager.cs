@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class LocationManager : MonoBehaviour
 {
+
+    public Location StartingLocation;
+
     public Location CurrentLocation;
     public Camera CameraMain;
     public float TransitionDuration = 1.0f;
@@ -17,6 +20,10 @@ public class LocationManager : MonoBehaviour
         foreach (var location in foundLocations) {
             locations.Add((Location)location);
         }
+        CurrentLocation = StartingLocation;
+        Camera cam = StartingLocation.GetComponentInParent<Camera>();
+        CameraMain.transform.positionTo(0.0f, cam.transform.position);
+        CameraMain.transform.rotationTo(0.0f, cam.transform.rotation);
     }
 
     // Update is called once per frame
@@ -28,7 +35,7 @@ public class LocationManager : MonoBehaviour
     public List<Location> GetLocations() {
         return locations;
     }
-    
+
     public void SetLocation(Location location) {
         CurrentLocation = location;
         Camera cam = location.GetComponentInParent<Camera>();
