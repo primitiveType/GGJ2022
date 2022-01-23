@@ -27,7 +27,7 @@ public class LocationManagerEditor : Editor
             }
         }
         GUILayout.Space(20);
-        foreach (var location in myTarget.Locations) {
+        foreach (var location in myTarget.GetLocations()) {
             if (GUILayout.Button(location.name)) {
                 myTarget.SetLocation(location);
             }

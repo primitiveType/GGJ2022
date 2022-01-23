@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class LocationManager : MonoBehaviour
 {
-    public List<Location> Locations = new List<Location>();
     public Location CurrentLocation;
     public Camera CameraMain;
-    public float Duration = 1.0f;
+    public float TransitionDuration = 1.0f;
     // Start is called before the first frame update
+    private List<Location> locations = new List<Location>();
+
     void Start()
     {
-        //m_CameraMain = Camera.main;
+        var foundLocations = FindObjectsOfType<Location>();
+        foreach (var location in foundLocations) {
+            locations.Add((Location)location);
+        }
     }
 
     // Update is called once per frame
@@ -21,11 +25,15 @@ public class LocationManager : MonoBehaviour
         
     }
 
+    public List<Location> GetLocations() {
+        return locations;
+    }
+    
     public void SetLocation(Location location) {
         CurrentLocation = location;
         Camera cam = location.GetComponentInParent<Camera>();
-        CameraMain.transform.positionTo(Duration, cam.transform.position);
-        CameraMain.transform.rotationTo(Duration, cam.transform.rotation);
+        CameraMain.transform.positionTo(TransitionDuration, cam.transform.position);
+        CameraMain.transform.rotationTo(TransitionDuration, cam.transform.rotation);
     }
 
     public void GoUp() {
