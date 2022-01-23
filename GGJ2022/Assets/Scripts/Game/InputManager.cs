@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     LocationManager m_LocationManager;
+    public GameObject Flashlight;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,11 @@ public class InputManager : MonoBehaviour
         if(Input.GetKeyUp("left")) {
             m_LocationManager.GoLeft();
         }
+        if(Input.GetKeyUp("l")) {
+            Flashlight.SetActive(!Flashlight.activeSelf);
+        }
+
+    
 
     }
 }

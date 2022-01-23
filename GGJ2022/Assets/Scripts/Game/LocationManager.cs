@@ -22,8 +22,8 @@ public class LocationManager : MonoBehaviour
         }
         CurrentLocation = StartingLocation;
         Camera cam = StartingLocation.GetComponentInParent<Camera>();
-        CameraMain.transform.positionTo(0.0f, cam.transform.position);
-        CameraMain.transform.rotationTo(0.0f, cam.transform.rotation);
+        CameraMain.transform.position = cam.transform.position;
+        CameraMain.transform.rotation = cam.transform.rotation;
     }
 
     // Update is called once per frame
