@@ -956,7 +956,7 @@
         "m_GuidSerialized": "a63d6de9-b550-4188-ad0f-5666840cad2a"
     },
     "m_Name": "OutlineMultiplier",
-    "m_DefaultReferenceName": "",
+    "m_DefaultReferenceName": "Vector1_18f583c279ac4cebb3173304467bfd7b",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
@@ -1368,7 +1368,7 @@
         "m_GuidSerialized": "2ad1db92-ef67-47b7-9c40-5b87d7f30166"
     },
     "m_Name": "AlwaysWhiteMap",
-    "m_DefaultReferenceName": "",
+    "m_DefaultReferenceName": "Texture2D_3a56c9f92c44476eaa48e74ba3853157",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
@@ -1653,7 +1653,7 @@
         "m_GuidSerialized": "8b982cba-4519-44f6-bc7c-6217f353ab4f"
     },
     "m_Name": "OutlineThickness",
-    "m_DefaultReferenceName": "",
+    "m_DefaultReferenceName": "Vector1_54fc7b28855548c3a01c6e3dbb414d30",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
@@ -2198,7 +2198,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "X",
     "m_StageCapability": 3,
-    "m_Value": 2.0,
+    "m_Value": 1.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
@@ -2755,7 +2755,7 @@
         "m_GuidSerialized": "d08f0886-9c72-48cb-a73c-def5f7116bcc"
     },
     "m_Name": "AlwaysBlackMap",
-    "m_DefaultReferenceName": "",
+    "m_DefaultReferenceName": "Texture2D_9decd11fde09473a8f26d493e9b1faea",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
@@ -3392,7 +3392,7 @@
         "m_GuidSerialized": "b2fbc784-0e3b-4d62-a691-1789c96ab56d"
     },
     "m_Name": "OutlineDither",
-    "m_DefaultReferenceName": "",
+    "m_DefaultReferenceName": "Vector1_d82ffb063d3f4cc180780357c575b676",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
