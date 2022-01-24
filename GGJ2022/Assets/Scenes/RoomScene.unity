@@ -334,9 +334,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 100
-  m_Range: 71.99288
-  m_SpotAngle: 154.09442
-  m_InnerSpotAngle: 21.80208
+  m_Range: 200
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 46.707672
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -390,13 +390,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510816198}
-  m_LocalRotation: {x: 0.78182405, y: -0.15199211, z: 0.20948909, w: 0.56724244}
-  m_LocalPosition: {x: -10.759999, y: 15.070001, z: 29.460001}
+  m_LocalRotation: {x: 0.92822784, y: -0.07160092, z: 0.24871789, w: 0.26721847}
+  m_LocalPosition: {x: -13.1, y: 12.419999, z: 33.520004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 652541834}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 108.075, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 147.88, y: -30, z: 0}
 --- !u!1 &648781332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670118650}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 10.345965, y: 12.338321, z: 61.24}
+  m_LocalPosition: {x: 13.74, y: 11.4, z: 61.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 436770863}
@@ -1309,7 +1309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 10.345965, y: 12.338321, z: 61.24}
+  m_LocalPosition: {x: 11.25, y: 12.338321, z: 61.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1589961153}
@@ -1418,7 +1418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908639232}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 10.345965, y: 10.838321, z: 37.973034}
+  m_LocalPosition: {x: 12.43, y: 11.08, z: 37.973034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 436770863}
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   Left: {fileID: 246098682}
   Up: {fileID: 734758022}
   Right: {fileID: 655254000}
-  Down: {fileID: 0}
+  Down: {fileID: 1670118652}
 --- !u!114 &1908639235
 MonoBehaviour:
   m_ObjectHideFlags: 0
