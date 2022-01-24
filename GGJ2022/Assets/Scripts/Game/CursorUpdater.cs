@@ -9,10 +9,16 @@ public class CursorUpdater : MonoBehaviour
     void Start()
     {
         cursorImage = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CursorHandler>();
+
+
     }
 
     public void OnMouseEnter()
     {
+        if (gameObject.tag == "Interactable")
+        cursorImage.InverseCursor();
+
+        if (gameObject.tag == "Moveable")
         cursorImage.HandCursor();
     }
 
