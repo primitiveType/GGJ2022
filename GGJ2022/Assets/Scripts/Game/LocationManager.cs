@@ -15,10 +15,6 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
     // Start is called before the first frame update
     private List<Location> locations = new List<Location>();
 
-    [SerializeField] private GameObject UpButton;
-    [SerializeField] private GameObject DownButton;
-    [SerializeField] private GameObject LeftButton;
-    [SerializeField] private GameObject RightButton;
 
     void Start()
     {
