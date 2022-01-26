@@ -8,6 +8,7 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
     public Location StartingLocation;
 
     public Location CurrentLocation;
+    private Location _lastLocation;
     public Camera CameraMain;
 
     public float TransitionDuration = 1.0f;
@@ -28,6 +29,7 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
         Camera cam = StartingLocation.GetComponentInParent<Camera>();
         CameraMain.transform.position = cam.transform.position;
         CameraMain.transform.rotation = cam.transform.rotation;
+        _lastLocation = CurrentLocation;
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
 
     public void SetLocation(Location location)
     {
+        _lastLocation = CurrentLocation;
         CurrentLocation = location;
         Camera cam = location.GetComponentInParent<Camera>();
         CameraMain.transform.positionTo(TransitionDuration, cam.transform.position);
@@ -82,5 +85,9 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
         if (CurrentLocation.Left == null) return;
 
         SetLocation(CurrentLocation.Left);
+    }
+
+    public void Back() {
+        SetLocation(_lastLocation);
     }
 }

@@ -10,9 +10,12 @@ public class ThreeMonkey : MonoBehaviour
     [SerializeField] private GameObject[] rightArmPrefabs;
     [SerializeField] private Light winnerLight;
 
+    [SerializeField] private Monkey[] monkeys;
+
     private GameObject[] leftArms = new GameObject[3];
     private GameObject[] rightArms = new GameObject[3];
-    // Start is called before the first frame update
+
+    
     private int[] leftArmSlot = new int[3];
     private int[] rightArmSlot = new int[3];
     void Start()
@@ -29,11 +32,19 @@ public class ThreeMonkey : MonoBehaviour
         }
         winnerLight.enabled = false;
         //simulate scrambling, this way I know it can be solved
+        // ShiftRight();
+        // ShiftRight();
+        // ShiftLeft();
+
+        ShiftLeft();
         ShiftRight();
+
+        RotateArms();
+
         ShiftRight();
         ShiftLeft();
         ShiftLeft();
-        ShiftRight();
+
         SetProperPivots();
     }
 
@@ -45,9 +56,10 @@ public class ThreeMonkey : MonoBehaviour
                 ShiftLeft();
                 break;
             case 1:
-                ShiftRight();
-                ShiftRight();
-                ShiftLeft();
+                // ShiftRight();
+                // ShiftRight();
+                // ShiftLeft();
+                RotateArms();
                 break;
             case 2:
                 ShiftLeft();
@@ -75,6 +87,16 @@ public class ThreeMonkey : MonoBehaviour
         leftArmSlot[2] = tmp;
     }
 
+    private void RotateArms() {
+        int tmp = leftArmSlot[0];
+        leftArmSlot[0] = leftArmSlot[2];
+        leftArmSlot[2] = tmp;
+
+        tmp = rightArmSlot[0];
+        rightArmSlot[0] = rightArmSlot[2];
+        rightArmSlot[2] = tmp;
+    }
+
     private void SetProperPivots() {
         for(var i=0;i<3;i++) {
             Transform myTransform = leftArms[leftArmSlot[i]].transform;
@@ -88,6 +110,9 @@ public class ThreeMonkey : MonoBehaviour
 
     public void SetWinCondition() {
         winnerLight.enabled=true;
+        foreach (Monkey monkey in monkeys) {
+            monkey.SetDisabled();
+        }
     }
 
     // Update is called once per frame
