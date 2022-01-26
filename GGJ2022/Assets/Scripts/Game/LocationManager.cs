@@ -26,9 +26,9 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
         }
 
         CurrentLocation = StartingLocation;
-        Camera cam = StartingLocation.GetComponentInParent<Camera>();
-        CameraMain.transform.position = cam.transform.position;
-        CameraMain.transform.rotation = cam.transform.rotation;
+        //Camera cam = StartingLocation.GetComponentInParent<Camera>();
+        CameraMain.transform.position = StartingLocation.transform.position;
+        CameraMain.transform.rotation = StartingLocation.transform.rotation;
         _lastLocation = CurrentLocation;
     }
 
@@ -46,9 +46,9 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
     {
         _lastLocation = CurrentLocation;
         CurrentLocation = location;
-        Camera cam = location.GetComponentInParent<Camera>();
-        CameraMain.transform.positionTo(TransitionDuration, cam.transform.position);
-        CameraMain.transform.rotationTo(TransitionDuration, cam.transform.rotation);
+        //Camera cam = location.GetComponentInParent<Camera>();
+        CameraMain.transform.positionTo(TransitionDuration, location.transform.position);
+        CameraMain.transform.rotationTo(TransitionDuration, location.transform.rotation);
     }
 
     public void GoUp()

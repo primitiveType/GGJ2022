@@ -35,10 +35,10 @@ public class InputManager : MonoBehaviour
     public void UpdateButtons()
     {
         var location = LocationManager.Instance.CurrentLocation;
-        buttonUp.SetActive(location.Up != null);
-        buttonDown.SetActive(location.Down != null);
-        buttonLeft.SetActive(location.Left != null);
-        buttonRight.SetActive(location.Right != null);
+        buttonUp.SetActive(location.Up != null && location.Up.Enabled);
+        buttonDown.SetActive(location.Down != null && location.Down.Enabled);
+        buttonLeft.SetActive(location.Left != null && location.Left.Enabled);
+        buttonRight.SetActive(location.Right != null && location.Right.Enabled);
     }
     public void Upmovement()
     {

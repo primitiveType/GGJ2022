@@ -9,6 +9,7 @@ public class ThreeMonkey : MonoBehaviour
     [SerializeField] private GameObject[] leftArmPrefabs;
     [SerializeField] private GameObject[] rightArmPrefabs;
     [SerializeField] private Light winnerLight;
+    [SerializeField] private Location nextLocation;
 
     [SerializeField] private Monkey[] monkeys;
 
@@ -21,11 +22,11 @@ public class ThreeMonkey : MonoBehaviour
     void Start()
     {
         for(var i=0;i<3;i++) {
-            GameObject leftArm = Instantiate(leftArmPrefabs[i], leftArmSlotPivots[i].transform, true);
+            GameObject leftArm = Instantiate(leftArmPrefabs[i], leftArmSlotPivots[i].transform, false);
             leftArm.transform.localPosition = Vector3.zero;
             leftArms[i] = leftArm;
             leftArmSlot[i] = i;
-            GameObject rightArm = Instantiate(rightArmPrefabs[i], rightArmSlotPivots[i].transform, true);
+            GameObject rightArm = Instantiate(rightArmPrefabs[i], rightArmSlotPivots[i].transform, false);
             rightArms[i] = rightArm;
             rightArm.transform.localPosition = Vector3.zero;
             rightArmSlot[i] = i;
@@ -113,6 +114,7 @@ public class ThreeMonkey : MonoBehaviour
         foreach (Monkey monkey in monkeys) {
             monkey.SetDisabled();
         }
+        nextLocation.Enabled = true;
     }
 
     // Update is called once per frame
