@@ -75,7 +75,7 @@ class LocationTool : EditorTool {
         Camera cam = (Camera)target;
         Handles.BeginGUI();
         {
-            GUILayout.BeginArea(new Rect(0, 0, 100, 200), new GUIStyle("box"));
+            GUILayout.BeginArea(new Rect(0, 0, 100, 300), new GUIStyle("box"));
             {
                 foreach (var location in locations) {
                     if (GUILayout.Button(location.name)) {
