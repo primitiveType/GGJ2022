@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 6
+  Value: "\xE7"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 8
+  Value: "\xF8"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 4
+  Value: "\u0161"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 3
+  Value: "\u2021"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 7
+  Value: "\xFE"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 2
+  Value: "\u0153"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 5
+  Value: "\xA7"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 9
+  Value: "\u2026"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 1
+  Value: "\xB5"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3

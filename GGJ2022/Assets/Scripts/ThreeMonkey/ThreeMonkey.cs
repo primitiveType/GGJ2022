@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ThreeMonkey : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class ThreeMonkey : MonoBehaviour
     private GameObject[] leftArms = new GameObject[3];
     private GameObject[] rightArms = new GameObject[3];
 
-    
+    public UnityEvent OnSuccess;
+
     private int[] leftArmSlot = new int[3];
     private int[] rightArmSlot = new int[3];
     void Start()
@@ -114,7 +116,7 @@ public class ThreeMonkey : MonoBehaviour
         foreach (Monkey monkey in monkeys) {
             monkey.SetDisabled();
         }
-        nextLocation.gameObject.SetActive(true);
+        OnSuccess.Invoke();
     }
 
     // Update is called once per frame

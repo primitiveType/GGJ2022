@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeypadKey : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public int Value;
+    public string Value;
     [SerializeField] private Material m_HighlightMaterial;
     private Material BaseMaterial { get; set; }
     private Renderer Renderer { get; set; }

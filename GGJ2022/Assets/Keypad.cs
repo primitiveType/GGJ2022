@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Keypad : MonoBehaviour
 {
-    public int Answer;
+    public string Answer;
 
     public InputField InputField;
 
@@ -19,15 +19,7 @@ public class Keypad : MonoBehaviour
 
     private void InputChanged(string arg0)
     {
-        if (int.TryParse(InputField.text, out int input))
-        {
-        }
-        else
-        {
-            return;
-        }
-
-        if (input == Answer)
+        if (arg0 == Answer)
         {
             //also play sound, etc.
             OnSuccess.Invoke();
