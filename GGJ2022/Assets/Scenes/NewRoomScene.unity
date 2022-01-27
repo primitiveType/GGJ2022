@@ -10104,8 +10104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e42366fbdf7624f82eff46817c3724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openHand: {fileID: 2800000, guid: e576705baf1ad5d4b8c6fbf5103fabff, type: 3}
-  closedHand: {fileID: 2800000, guid: f0ad4e4743b5aab4590e010d22a38ad2, type: 3}
+  openHand: {fileID: 2800000, guid: 31d0e906164c4854ea6a73d868f5e0b8, type: 3}
+  closedHand: {fileID: 2800000, guid: 31d0e906164c4854ea6a73d868f5e0b8, type: 3}
   ditheredCursor: {fileID: 2800000, guid: 3e7c7d703f1a5d4478da5f468eeccf0f, type: 3}
   inverseCursor: {fileID: 2800000, guid: 642d2084a2c842c45b732ab57a690a58, type: 3}
 --- !u!114 &1687258589

@@ -17,11 +17,13 @@ public class CursorHandler : MonoBehaviourSingleton<CursorHandler>
 
     public void HandCursor()
     {
-        Cursor.SetCursor(openHand, new Vector2(openHand.width / 2, openHand.height/2), CursorMode.Auto);
+        //Cursor.SetCursor(openHand, new Vector2(openHand.width / 2, openHand.height/2), CursorMode.Auto);
+        Cursor.SetCursor(openHand, Vector2.zero, CursorMode.Auto);
     }
     public void ClosedCursor()
     {
-        Cursor.SetCursor(closedHand, new Vector2(closedHand.width / 2, closedHand.height / 2), CursorMode.Auto);
+        //Cursor.SetCursor(closedHand, new Vector2(closedHand.width / 2, closedHand.height / 2), CursorMode.Auto);
+        Cursor.SetCursor(closedHand, Vector2.zero, CursorMode.Auto);
     }
     public void DitherCursor()
     {
