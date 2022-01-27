@@ -114,7 +114,7 @@ public class ThreeMonkey : MonoBehaviour
         foreach (Monkey monkey in monkeys) {
             monkey.SetDisabled();
         }
-        nextLocation.Enabled = true;
+        nextLocation.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

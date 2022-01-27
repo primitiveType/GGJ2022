@@ -40,6 +40,7 @@ public class RealClock : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
             {
                 // ClockPuzzle.Instance.SwingOffset -= Time.deltaTime;
                 ClockPuzzle.Instance.SwingOffset -= Time.deltaTime;
+                ClockPuzzle.Instance.SwingFrozen = true;
             }
 
             if (m_FreezingAffectsLightTime)
@@ -49,7 +50,18 @@ public class RealClock : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
             }
             
         }
+        else
+        {
+            if (m_FreezingAffectsSwingTime)
+            {
+                ClockPuzzle.Instance.SwingFrozen = false;
+            }
+        }
 
+        if (!m_IgnoreGlobalTime && ClockPuzzle.Instance.SwingFrozen)
+        {
+            return;
+        }
         bool forward = true;
         float newRot = 0f;
         float outsideOffset = m_IgnoreGlobalTime ? 0 : ClockPuzzle.Instance.SwingOffset;

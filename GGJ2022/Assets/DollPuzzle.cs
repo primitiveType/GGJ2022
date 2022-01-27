@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum DollSlot
 {
@@ -14,7 +15,8 @@ public enum DollSlot
 public class DollPuzzle : MonoBehaviour
 {
     private Dictionary<DollSlot, SelectDollPart> CurrentPieces = new Dictionary<DollSlot, SelectDollPart>();
-    
+
+    public UnityEvent OnSuccess;
     // Start is called before the first frame update
     public void SelectPiece(SelectDollPart piece, DollSlot slot)
     {
@@ -36,6 +38,6 @@ public class DollPuzzle : MonoBehaviour
 
     private void PuzzleSolved()
     {
-        gameObject.SetActive(false);
+        OnSuccess.Invoke();
     }
 }

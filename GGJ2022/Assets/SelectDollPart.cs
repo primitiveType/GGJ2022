@@ -11,7 +11,7 @@ public class SelectDollPart : MonoBehaviour, IPointerClickHandler
 
      private void Start()
      {
-         startPosition = transform.position;
+         startPosition = transform.localPosition;
      }
 
      public void OnPointerClick(PointerEventData eventData)

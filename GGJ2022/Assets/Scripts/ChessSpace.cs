@@ -15,10 +15,12 @@ public class ChessSpace : MonoBehaviour, IInteractable, IPointerClickHandler
 
     public void Highlight()
     {
+        CursorHandler.Instance.HandCursor();
     }
 
     public void UnHighlight()
     {
+        CursorHandler.Instance.ResetCursor();
     }
 
     public bool Select(IInteractable prev)

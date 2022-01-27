@@ -1,15 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorHandler : MonoBehaviour
+public class CursorHandler : MonoBehaviourSingleton<CursorHandler>
 {
 
-    public static CursorHandler instance;
-    //if you want it private do:
     [SerializeField]
     Texture2D openHand,closedHand,ditheredCursor,inverseCursor;
 
+
+    private void Start()
+    {
+        InverseCursor();
+    }
 
     public void HandCursor()
     {
@@ -26,5 +30,11 @@ public class CursorHandler : MonoBehaviour
     public void InverseCursor()
     {
         Cursor.SetCursor(ditheredCursor, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void ResetCursor()
+    {
+        // Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        InverseCursor();
     }
 }

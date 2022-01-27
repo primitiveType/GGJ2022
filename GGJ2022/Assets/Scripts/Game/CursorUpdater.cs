@@ -1,29 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CursorUpdater : MonoBehaviour
+public class CursorUpdater : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler,
+    IPointerUpHandler
 {
-    CursorHandler cursorImage;
-    // Start is called before the first frame update
-    void Start()
+    public bool Interactable;
+
+    public bool Moveable;
+    private bool isOver;
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        cursorImage = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CursorHandler>();
-
-
+        isOver = true;
+        CursorHandler.Instance.HandCursor();
     }
 
-    public void OnMouseEnter()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        if (gameObject.tag == "Interactable")
-        cursorImage.InverseCursor();
-
-        if (gameObject.tag == "Moveable")
-        cursorImage.HandCursor();
+        isOver = false;
+        CursorHandler.Instance.ResetCursor();
     }
 
-    void OnMouseExit()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        CursorHandler.Instance.ClosedCursor();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (isOver)
+        {
+            CursorHandler.Instance.HandCursor();
+        }
+        else
+        {
+            CursorHandler.Instance.ResetCursor();
+        }
     }
 }
