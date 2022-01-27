@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NewRoomScene.unity
     guid: 984416c8f9e464ddb94c80c1b9d292b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TitleScreen.unity
     guid: 044928ffadca9fa44bbc441945925218
   - enabled: 0
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SubtitleTest.unity
     guid: 4eaf628bffb21b24ca670bcc984dddef
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 55b9f755d0553476990322d05dd8cf19
   m_configObjects: {}
