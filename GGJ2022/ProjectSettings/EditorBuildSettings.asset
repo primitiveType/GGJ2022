@@ -5,19 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/NewRoomScene.unity
-    guid: 984416c8f9e464ddb94c80c1b9d292b4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 044928ffadca9fa44bbc441945925218
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 0
-    path: Assets/Scenes/SubtitleTest.unity
-    guid: 4eaf628bffb21b24ca670bcc984dddef
   - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: 55b9f755d0553476990322d05dd8cf19
+  - enabled: 1
+    path: Assets/Scenes/NewRoomScene.unity
+    guid: 984416c8f9e464ddb94c80c1b9d292b4
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 233d08fa2702c4d469257df791e6186f
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: 26225d4a8cda11b4e95d1f855b0c01d0
+  - enabled: 0
+    path: Assets/Scenes/TestingScenes/SampleScene.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 0
+    path: Assets/Scenes/TestingScenes/SubtitleTest.unity
+    guid: 4eaf628bffb21b24ca670bcc984dddef
   m_configObjects: {}

@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public Timer time;
     public GameObject menuParticle;
-    public bool isFullScreen = false;
     public static bool pausedGame = false;
-    public GameObject MenuUI, ButtonUI;
-    public AudioMixer audio; 
+    public GameObject MenuUI, ButtonUI, OptionUI;
 
     private void Awake()
     {
@@ -18,6 +19,8 @@ public class Menu : MonoBehaviour
         menuParticle.SetActive(false);
         MenuUI.SetActive(false);
         ButtonUI.SetActive(true);
+        OptionUI.SetActive(false);
+    
     }
     // Update is called once per frame
     void Update()
@@ -29,43 +32,58 @@ public class Menu : MonoBehaviour
             }
             else
             {
+                time.StopTimer();
                 Pause();
             }
         }
     }
-    public void SetVolume (float volume)
-    {
-        audio.SetFloat("volume", volume);
-    }
-    public void SetFullscreen(bool isFullScreen)
-    {
-        Screen.fullScreen = isFullScreen;
-    }
+
+    //Pause Menu controls
     public void Pause()
     {
         menuParticle.SetActive(true);
         ButtonUI.SetActive(false);
         MenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        //time.StopTimer();
+        //Time.timeScale = 0f;
     }
-
     public void Resume()
     {
+        time.StartTimer();
         menuParticle.SetActive(false);
         ButtonUI.SetActive(true);
         MenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        OptionUI.SetActive(false);
+        //time.StartTimer();
+        //Time.timeScale = 1f;
     }
+    public void OptionsMenu()
+    {
+        MenuUI.SetActive(false);
+        OptionUI.SetActive(true);
+    }
+    public void BackButton()
+    {
+
+        MenuUI.SetActive(true);
+        OptionUI.SetActive(false);
+    }
+
+    //SceneController
     public void Quit()
     {
         Application.Quit();
     }
-    public void Play()
+    public void Progression()
     {
-        SceneManager.LoadScene("NewRoomScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
     public void MainMenu()
     {
         SceneManager.LoadScene("TitleScreen");
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOverScreen");
     }
 }
