@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
             menuScript.GameOver();
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString("00");
     }
     public void StartTimer()
     {
