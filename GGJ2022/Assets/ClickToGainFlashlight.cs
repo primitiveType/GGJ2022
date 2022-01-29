@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class ClickToGainFlashlight : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
     [SerializeField] private Material m_HighlightMaterial;
+    public UnityEvent OnSuccess;
     private Material BaseMaterial { get; set; }
     private Renderer Renderer { get; set; }
+
+    
 
     private void Start()
     {
@@ -28,6 +32,7 @@ public class ClickToGainFlashlight : MonoBehaviour, IPointerEnterHandler, IPoint
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
         Flashlight.Instance.SetActive(true);
+        OnSuccess.Invoke();
         gameObject.SetActive(false);
     }
 
