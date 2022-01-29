@@ -48,7 +48,8 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
         CurrentLocation = location;
         //Camera cam = location.GetComponentInParent<Camera>();
         CameraMain.transform.positionTo(TransitionDuration, location.transform.position);
-        CameraMain.transform.rotationTo(TransitionDuration, location.transform.rotation);
+        CameraMain.transform.rotationTo(TransitionDuration, 
+            location.transform.rotation).setOnCompleteHandler(x => location.OnArrival());
     }
 
     public void GoUp()
