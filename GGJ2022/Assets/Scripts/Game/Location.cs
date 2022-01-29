@@ -47,6 +47,8 @@ public class Location : MonoBehaviour
     public void OnArrival() {        
         if(!_marked) OnFirstArrival.Invoke();
         _marked = true;
+        
+        
     }
     
 }

@@ -17,6 +17,9 @@ public class ChessGame : MonoBehaviour
     [SerializeField] private int numSquares;
     [SerializeField] private PhysicsRaycaster Raycaster;
 
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip PieceMovedSound;
+    
     private ChessStateMachine Machine { get; } = new ChessStateMachine();
     private ChessSpace[][] Squares;
 
@@ -141,5 +144,10 @@ public class ChessGame : MonoBehaviour
 
         piece.MoveToSpace(chessSpace);
         return true;
+    }
+
+    public void PieceMoved()
+    {
+        AudioSource.PlayOneShot(PieceMovedSound);
     }
 }

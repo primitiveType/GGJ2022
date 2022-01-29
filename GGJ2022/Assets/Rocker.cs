@@ -10,6 +10,7 @@ public class Rocker : MonoBehaviour
     public float timeToRock = 10;
     private float timer;
 
+    [SerializeField] private AudioSource AudioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +37,7 @@ public class Rocker : MonoBehaviour
     public void Rock()
     {
         rb.AddTorque(force, ForceMode.Force);
+        AudioSource.Stop();
+        AudioSource.Play();
     }
 }

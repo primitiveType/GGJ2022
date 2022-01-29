@@ -12,20 +12,37 @@ public enum DollSlot
     RightLeg,
     Tail
 }
+
 public class DollPuzzle : MonoBehaviour
 {
     private Dictionary<DollSlot, SelectDollPart> CurrentPieces = new Dictionary<DollSlot, SelectDollPart>();
 
     public UnityEvent OnSuccess;
+    
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip AudioClip;
+
+
     // Start is called before the first frame update
     public void SelectPiece(SelectDollPart piece, DollSlot slot)
     {
+        AudioSource.PlayOneShot(AudioClip);
+        if (CurrentPieces.TryGetValue(slot, out SelectDollPart currentPiece))
+        {
+            currentPiece?.UnselectPiece();
+            CurrentPieces[slot] = null;
+            if (piece == currentPiece)
+            {
+                return;
+            }
+        }
+
         CurrentPieces[slot] = piece;
-        if (CurrentPieces.Count == 6)
+        piece.SelectPiece();
+        if (CurrentPieces.Count == 5)
         {
             foreach (var current in CurrentPieces.Values)
             {
-                
                 if (current == null || !current.IsCorrect)
                 {
                     return;

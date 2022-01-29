@@ -10,6 +10,12 @@ public class Keypad : MonoBehaviour
 
     public UnityEvent OnSuccess;
 
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip KeyPress;
+    [SerializeField] private AudioClip Failure;
+    [SerializeField] private AudioClip Success;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +25,15 @@ public class Keypad : MonoBehaviour
 
     private void InputChanged(string arg0)
     {
+        AudioSource.PlayOneShot(KeyPress);
         if (arg0 == Answer)
         {
-            //also play sound, etc.
+            AudioSource.PlayOneShot(Success);
             OnSuccess.Invoke();
         }
         else if (InputField.text.Length >= Answer.ToString().Length)
         {
+            AudioSource.PlayOneShot(Failure);
             InputField.text = "";
         }
     }

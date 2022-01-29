@@ -145,6 +145,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  AudioSource: {fileID: 0}
+  KeyPress: {fileID: 8300000, guid: d10297d0a202d024bab444ee220dc580, type: 3}
+  Failure: {fileID: 8300000, guid: 888a57eeae8ff714e82529c7f118d90b, type: 3}
+  Success: {fileID: 8300000, guid: 55d77948ac899c64dafc0138a33d1260, type: 3}
 --- !u!223 &6208531241580759917
 Canvas:
   m_ObjectHideFlags: 0

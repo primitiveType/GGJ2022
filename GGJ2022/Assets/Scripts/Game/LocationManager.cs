@@ -15,6 +15,9 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
 
     // Start is called before the first frame update
     private List<Location> locations = new List<Location>();
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip Step;
+    private bool isMoving;
 
 
     void Start()
@@ -32,24 +35,37 @@ public class LocationManager : MonoBehaviourSingleton<LocationManager>
         _lastLocation = CurrentLocation;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public List<Location> GetLocations()
     {
         return locations;
     }
 
+
     public void SetLocation(Location location)
     {
+        if (isMoving)
+        {
+            return;
+        }
+
         _lastLocation = CurrentLocation;
         CurrentLocation = location;
         //Camera cam = location.GetComponentInParent<Camera>();
-        CameraMain.transform.positionTo(TransitionDuration, location.transform.position);
+        var tween = CameraMain.transform.positionTo(TransitionDuration, location.transform.position);
+        isMoving = true;
+        AudioSource.PlayOneShot(Step);
+
         CameraMain.transform.rotationTo(TransitionDuration, 
-            location.transform.rotation).setOnCompleteHandler(x => location.OnArrival());
+            location.transform.rotation).setOnCompleteHandler(x =>
+        {
+            location.OnArrival();
+            OnArrival();
+        });
+    }
+
+    private void OnArrival()
+    {
+        isMoving = false;
     }
 
     public void GoUp()

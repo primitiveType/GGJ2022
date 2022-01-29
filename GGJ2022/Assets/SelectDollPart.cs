@@ -8,23 +8,28 @@ public class SelectDollPart : MonoBehaviour, IPointerClickHandler
      public bool IsCorrect;
 
      private Vector3 startPosition;
+     private Quaternion startRotation;
 
      private void Start()
      {
          startPosition = transform.localPosition;
+         startRotation = transform.localRotation;
      }
 
      public void OnPointerClick(PointerEventData eventData)
     {
-        if (transform.localPosition == startPosition)
-        {
             GetComponentInParent<DollPuzzle>().SelectPiece(this, Slot);
-            transform.localPosition = Vector3.zero;
-        }
-        else
-        {
-            GetComponentInParent<DollPuzzle>().SelectPiece(null, Slot);
-            transform.localPosition = startPosition;
-        }
     }
+
+     public void UnselectPiece()
+     {
+         transform.localPosition = startPosition;
+         transform.localRotation = startRotation;
+     }
+
+     public void SelectPiece()
+     {
+         transform.localPosition = Vector3.zero;
+         transform.localRotation = Quaternion.identity;
+     }
 }

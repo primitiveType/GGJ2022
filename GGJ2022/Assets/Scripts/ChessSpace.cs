@@ -27,6 +27,7 @@ public class ChessSpace : MonoBehaviour, IInteractable, IPointerClickHandler
     {
         if (Manager.TryMoveToSpace(this, prev as ChessPiece))
         {
+            Manager.PieceMoved();
             return true;
         }
 
