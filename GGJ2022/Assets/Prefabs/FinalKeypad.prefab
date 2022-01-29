@@ -1957,7 +1957,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u2026"
+  m_Text: "\u017E"
 --- !u!1 &7080233151341740702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c36ada0801431288ac422801bfe4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: "\u2026"
+  Value: "\u017E"
   m_HighlightMaterial: {fileID: 2100000, guid: 43fcdf8f1edfc9a4bbbfe72ec734c62b, type: 2}
   clickDistance: {x: 0, y: 0, z: -0.02}
   clickTime: 0.3
