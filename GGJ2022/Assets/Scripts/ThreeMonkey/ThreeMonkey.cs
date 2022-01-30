@@ -112,7 +112,7 @@ public class ThreeMonkey : MonoBehaviour
     }
 
     public void SetWinCondition() {
-        winnerLight.enabled=true;
+        //winnerLight.enabled=true;
         foreach (Monkey monkey in monkeys) {
             monkey.SetDisabled();
         }
