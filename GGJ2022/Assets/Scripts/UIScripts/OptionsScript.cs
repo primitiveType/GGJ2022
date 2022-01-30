@@ -13,12 +13,13 @@ public class OptionsScript : MonoBehaviour
     [SerializeField]
     private Slider volumeSlider = null;
 
- 
+
 
     public void SaveVolumeButton()
     {
         float volumeValue = volumeSlider.value;
         PlayerPrefs.SetFloat("volume", volumeValue);
+        
     }
 
     public void LoadValues()
