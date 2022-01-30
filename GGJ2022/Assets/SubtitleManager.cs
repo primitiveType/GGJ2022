@@ -32,7 +32,7 @@ public class SubtitleManager : MonoBehaviourSingleton<SubtitleManager>
             yield return null;
         }
         
-        Destroy(CurrentText);
+        Destroy(CurrentText.gameObject);
         CurrentText = null;
     }
 
