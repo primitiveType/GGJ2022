@@ -9,7 +9,6 @@ public class ThreeMonkey : MonoBehaviour
     [SerializeField] private GameObject[] rightArmSlotPivots;
     [SerializeField] private GameObject[] leftArmPrefabs;
     [SerializeField] private GameObject[] rightArmPrefabs;
-    [SerializeField] private Light winnerLight;
     [SerializeField] private Location nextLocation;
 
     [SerializeField] private Monkey[] monkeys;
@@ -33,7 +32,6 @@ public class ThreeMonkey : MonoBehaviour
             rightArm.transform.localPosition = Vector3.zero;
             rightArmSlot[i] = i;
         }
-        winnerLight.enabled = false;
         //simulate scrambling, this way I know it can be solved
         // ShiftRight();
         // ShiftRight();
@@ -112,7 +110,6 @@ public class ThreeMonkey : MonoBehaviour
     }
 
     public void SetWinCondition() {
-        //winnerLight.enabled=true;
         foreach (Monkey monkey in monkeys) {
             monkey.SetDisabled();
         }
