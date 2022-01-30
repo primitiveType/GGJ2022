@@ -12,6 +12,12 @@ public class Dissolver : MonoBehaviour
     void Start()
     {
         renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer renderer1 in renderers)
+        {
+            renderer1.sharedMaterial = renderer1.material;
+        }
+        
+
     }
 
     public void Dissolve()
