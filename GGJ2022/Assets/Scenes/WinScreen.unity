@@ -5380,7 +5380,7 @@ GameObject:
   - component: {fileID: 742965470}
   - component: {fileID: 742965469}
   m_Layer: 5
-  m_Name: WinText (2)
+  m_Name: otherSpacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
