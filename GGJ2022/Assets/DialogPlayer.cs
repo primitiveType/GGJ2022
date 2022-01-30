@@ -10,7 +10,7 @@ public class DialogPlayer : MonoBehaviourSingleton<DialogPlayer>
 
     private void Start()
     {
-        PlayClip("beholderDie.mp3");
+        //PlayClip("beholderDie.mp3");
     }
 
     public void PlayClip(string name)
