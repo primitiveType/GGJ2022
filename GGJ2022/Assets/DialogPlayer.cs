@@ -20,7 +20,7 @@ public class DialogPlayer : MonoBehaviourSingleton<DialogPlayer>
 
     private IEnumerator PlayClipAndSubtitles(string name)
     {
-        WWW request = new WWW(Path.Combine(Application.streamingAssetsPath, "Audio", name));
+        WWW request = new WWW(Path.Combine("file://", Application.streamingAssetsPath, "Audio", name));
         yield return request;
         var clip = request.GetAudioClip();
 
